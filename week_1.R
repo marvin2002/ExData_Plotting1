@@ -1,14 +1,4 @@
- y <- c(5, 7, 9,11)
- x <- c(2,3, 4,5)
- par(mfrow=c(1, 2))
 
- model1 <- lm(y~x)
- plot(x, y, main = "y ~ a + bx")
- abline(a = model1$coefficients[[1]], b= model1$coefficients[[2]], col = "blue")
- model2 <-  lm(y~I(x^2))
- plot(x, y, main = "y ~ x^2")
- abline(a = model2$coefficients[[1]], b = model2$coefficients[[2]], col = "magenta")
- curve(model2$coefficients[[1]]+ model2$coefficients[[2]]*x^2)
  
  ##
 hpc <-  read.csv("household_power_consumption.txt", sep = ";", stringsAsFactors = FALSE)
