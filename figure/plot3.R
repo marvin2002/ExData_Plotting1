@@ -14,7 +14,7 @@ hpc_dat[, "DateTime"] <- as.POSIXct(hpc_dat$Date_Time, format="%Y-%m-%d %H:%M:%S
 
 #PLOT NO. 3
 
-png("plot3.png")
+png("plot3.png", width = 480, height = 480)
 plot(hpc_dat$DateTime, hpc_dat$Sub_metering_1, type= "n")
 plot(hpc_dat$DateTime, hpc_dat$Sub_metering_1, type= "l", xlab = "", ylab = "Energy sub metering")
 lines(hpc_dat$DateTime, hpc_dat$Sub_metering_2, type= "l", col= "red")
