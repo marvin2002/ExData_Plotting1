@@ -14,7 +14,7 @@ hpc_dat[, "DateTime"] <- as.POSIXct(hpc_dat$Date_Time, format="%Y-%m-%d %H:%M:%S
 
 #PLOT NO. 4
 
-png("plot4.png")
+png("plot4.png", width = 480, height = 480)
 par(mfrow= c(2,2))
 plot( hpc_dat$DateTime,  hpc_dat$Global_active_power, ylab = "Global Active Power (kilowatts)", xlab= "", type="l")
 plot(hpc_dat$DateTime, hpc_dat$Voltage, xlab = "datetime", ylab = "Voltage", type = "l" )
